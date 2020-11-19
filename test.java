@@ -1,80 +1,29 @@
-root@75:~# nano
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  GNU nano 2.0.6                                     New Buffer                                                                      Modified  
-
-public class test
-{
-        public static void main(String[] args)
-        {
-                System.out.println("HEllo World");
-        }
+import java.util.Scanner;
+public class test {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int i, k=0, p=0, ns, lb=0, ub=9;
+		int m[] = new int[10];
+		for(i = 0;i < 10;i++) {
+			System.out.println("Enter the numbers in the cell: ");
+			m[i] = sc.nextInt();
+		}
+		System.out.println("Enter the number to be searched: ");
+		ns = sc.nextInt();
+		while(lb <= ub) {
+			p = (lb + ub)/2;
+			if(m[p] < ns) 
+				lb = p + 1;
+			if(m[p] > ns)
+				ub = p - 1;
+			if(m[p] == ns) {
+				k = 1;
+				break;
+			} 
+		}
+		if(k == 1)
+			System.out.println("Search Succesful");
+		else
+			System.out.println("Search UnSuccesful");
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-^G Get Help            ^O WriteOut            ^R Read File           ^Y Prev Page           ^K Cut Text            ^C Cur Pos
-^X Exit                ^J Justify             ^W Where Is            ^V Next Page           ^U UnCut Text          ^T To Spell

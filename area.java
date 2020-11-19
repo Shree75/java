@@ -1,8 +1,8 @@
 import java.util.Scanner;
-public class area
-{
-    public static void main(String[] args)
-    {
+public class area {
+    
+    public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         area ob = new area();
         System.out.println("enter the base and height of ||gm respectively");
@@ -20,18 +20,15 @@ public class area
         ob.ar(a, b, p, 0.5);
     }
 
-	public void ar(double base, double ht)
-    {
+	public void ar(double base, double ht) {
         System.out.println("the area of ||gm is: " + (base * ht));
     }
 
-    public void ar(double d1, double d2, double d)
-    {
+    public void ar(double d1, double d2, double d) {
         System.out.println("The area of rhombus: " + Math.round(d * d1 * d2));
     }
 
-    public void ar(double a, double b, double p, double h)
-    {
+    public void ar(double a, double b, double p, double h) {
         System.out.println("The area of trapezium is: " + (h * (a + b) * p)); 
     }
 }
